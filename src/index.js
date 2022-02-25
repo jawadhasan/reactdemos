@@ -12,10 +12,43 @@ import Swal from 'sweetalert2'
 
 import { TodoApp } from "./todo-app/todo-app.js";
 
-//App start
-const app = document.getElementById("root");
-ReactDOM.render(<TodoApp />, app);
+import { fleet } from "./vehicles/fleet-data.js";
+import {VehicleDataService} from './vehicles/vehicle-data-service.js';
 
+import {VehicleTable} from "./vehicles/vehicles-table";
+
+let dataservice = new VehicleDataService();
+dataservice.loadData(fleet);
+
+//cars data
+let carsMap = dataservice.cars.map(elem => (
+    {
+      id: elem.id,
+      license: elem.license,
+      latlong: elem.latlong
+    }));
+
+//trucks data
+let trucksMap = dataservice.trucks.map(elem => (
+    {
+      id: elem.id,
+      license: elem.license,
+      latlong: elem.latlong
+    }));
+
+let vehicles = carsMap.concat(trucksMap);
+
+console.log('vehicles:', vehicles);
+
+//Vehicle  example
+const app = document.getElementById("root");
+ReactDOM.render(<VehicleTable vehicles={vehicles} />, app);
+
+
+
+//Todo app example
+// const app = document.getElementById("root");
+// ReactDOM.render(<TodoApp />, app);
 
 
 setTimeout(() => {
@@ -37,24 +70,3 @@ function displayObject(data) {
 }
 
 
-
-$(function () {
-
-    application.showToast(application.title, 'Application Ready!');
-
-    //Acitve Link, Highlighting
-    $('.navbar-nav .nav-link').on('click', (e) => {
-        $('.navbar-nav .nav-link').removeClass('active');
-        $(e.target).addClass('active');
-    });
-
-
-
-    //footer links - click event binding
-    $(".footer-links a").on('click', (e) => {
-        let pageLink = e.target.getAttribute("data-link");
-        console.log('data-', pageLink);
-        application.activateRoute(pageLink ?? 'Contact');
-    });
-
-})
