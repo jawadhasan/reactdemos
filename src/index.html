@@ -6,41 +6,61 @@
   <base href="/">
   <title>React Demos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
   <!-- Style Sheets -->
   <link rel="stylesheet" href="site.css">
-  
- 
 </head>
 
-<body class="container"> 
+<body class="container">
 
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light border">
-    <a class="navbar-brand" href="/">      
-    ${this.title}
+    <a class="navbar-brand" href="/">
+      React Demos
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
-        ${links}
+        <!-- <li class="nav-item">
+          <a class="nav-link">ReactFirst</a>
+        </li> -->
       </ul>
     </div>
-  </nav> 
+  </nav>
 
 
-  <div class="page-content border">page-content-goes-here</div>
-  
-  
+  <!-- PAGE HEADING -->
+  <section class="flex-grow-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="display-6">Basic React Demos</h1>
+          <p class="fst-italic text-muted">This page is being used for testing React Demos. Powered by <a
+              class="text-primary" href="https://hexquote.com/" target="_blank">hexquote</a></p>
+          <hr />
+        </div>
 
-  
+      </div>
 
+      <div class="row">
+        <div class="col-lg-12">
+
+            <!-- REACT APP -->
+
+          <div id="root"></div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- App Code -->
-  <script src="./index.js" ></script>
+  <script src="./index.js"></script>
 
 
 </body>
+
 </html>
