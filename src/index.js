@@ -16,8 +16,15 @@ import { TodoApp } from "./todo-app/todo-app.js";
 const app = document.getElementById("root");
 ReactDOM.render(<TodoApp />, app);
 
-//call this method to display alerts....
-displayObject("A notification place holder");
+
+
+setTimeout(() => {
+    //call this method to display alerts....
+    let msgObj = {"message": "Hello World!"};
+    displayObject(msgObj);
+
+}, 2000);
+
 
 function displayObject(data) {
     Swal.fire({
