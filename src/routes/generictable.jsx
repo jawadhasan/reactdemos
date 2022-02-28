@@ -2,11 +2,11 @@ import React from "react"
 
 import { fleet } from "../vehicles/fleet-data.js";
 import { VehicleDataService } from '../vehicles/vehicle-data-service.js';
-import { VehicleTable } from "../vehicles/vehicles-table";
+import { Table } from "../table/table";
 
 
 
-export default function Vehicles() {
+export default function GenericTable() {
 
 let dataservice = new VehicleDataService();
 dataservice.loadData(fleet);
@@ -32,10 +32,9 @@ let vehicles = carsMap.concat(trucksMap);
 
 
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <div>
         <h2>Vehicles</h2>
-
-        <VehicleTable vehicles={vehicles} />
-      </main>
+        <Table tableData={vehicles} tableHeaders="id license latlong" />
+      </div>
     );
   }

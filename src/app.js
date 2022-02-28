@@ -20,6 +20,10 @@ export default function App() {
             </li>
 
             <li className="nav-item">
+              <Link className="nav-link" to="/generictable">Vehicles(Generic Table)</Link>
+            </li>
+
+            <li className="nav-item">
               <Link className="nav-link" to="/vehicles">Vehicles</Link>
             </li>
             <li className="nav-item">
@@ -43,6 +47,10 @@ export default function App() {
               <h1 className="display-6">Basic React Demos</h1>
               <p className="fst-italic text-muted">This page is being used for testing React Demos. Powered by <a
                 className="text-primary" href="https://hexquote.com/" target="_blank">hexquote</a></p>
+
+              <p>See more demos <a
+                className="text-primary" href="https://jsui.awsclouddemos.com/" target="_blank">jsui.awsclouddemos.com</a></p>
+
               <hr />
             </div>
 

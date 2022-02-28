@@ -17,6 +17,7 @@ import Invoices from "./routes/invoices";
 import {TodoApp} from "./todo-app/todo-app"
 import Vehicles from './routes/vehicles';
 import DataFlow from './routes/dataflow';
+import GenericTable from './routes/generictable';
 
 const rootElement = document.getElementById("root");
 
@@ -25,7 +26,8 @@ render(
         <Routes>
             <Route path="/" element={<App />}>
 
-                <Route path="dataflow" element={<DataFlow />} />  
+                <Route path="dataflow" element={<DataFlow />} /> 
+                <Route path="generictable" element={<GenericTable />} /> 
 
                 <Route path="vehicles" element={<Vehicles />} />
                 <Route path="todo" element={<TodoApp />} />
