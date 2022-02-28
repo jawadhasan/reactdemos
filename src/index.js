@@ -10,6 +10,8 @@ import Swal from 'sweetalert2'
 import React from "react"
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from 'react-router-dom'
+
 
 import App from "./app";
 import Expenses from "./routes/expenses";
@@ -22,7 +24,7 @@ import GenericTable from './routes/generictable';
 const rootElement = document.getElementById("root");
 
 render(
-    <BrowserRouter>
+    <HashRouter >
         <Routes>
             <Route path="/" element={<App />}>
 
@@ -36,7 +38,7 @@ render(
 
             </Route>
         </Routes>
-    </BrowserRouter>,
+    </HashRouter >,
     rootElement
 
 );
