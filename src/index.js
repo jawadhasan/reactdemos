@@ -17,37 +17,45 @@ import {VehicleDataService} from './vehicles/vehicle-data-service.js';
 
 import {VehicleTable} from "./vehicles/vehicles-table";
 
-let dataservice = new VehicleDataService();
-dataservice.loadData(fleet);
 
-//cars data
-let carsMap = dataservice.cars.map(elem => (
-    {
-      id: elem.id,
-      license: elem.license,
-      latlong: elem.latlong
-    }));
+import {Button} from "./hook-example/hook-example.js"
 
-//trucks data
-let trucksMap = dataservice.trucks.map(elem => (
-    {
-      id: elem.id,
-      license: elem.license,
-      latlong: elem.latlong
-    }));
 
-let vehicles = carsMap.concat(trucksMap);
+const app = document.getElementById("root");
+ReactDOM.render(<Button />, app);
 
-console.log('vehicles:', vehicles);
+
+// ReactDOM.render(<VehicleTable vehicles={vehicles} />, app);
+
+// let dataservice = new VehicleDataService();
+// dataservice.loadData(fleet);
+
+// //cars data
+// let carsMap = dataservice.cars.map(elem => (
+//     {
+//       id: elem.id,
+//       license: elem.license,
+//       latlong: elem.latlong
+//     }));
+
+// //trucks data
+// let trucksMap = dataservice.trucks.map(elem => (
+//     {
+//       id: elem.id,
+//       license: elem.license,
+//       latlong: elem.latlong
+//     }));
+
+// let vehicles = carsMap.concat(trucksMap);
+
+// console.log('vehicles:', vehicles);
 
 //Vehicle  example
-const app = document.getElementById("root");
-ReactDOM.render(<VehicleTable vehicles={vehicles} />, app);
+// ReactDOM.render(<VehicleTable vehicles={vehicles} />, app);
 
 
 
 //Todo app example
-// const app = document.getElementById("root");
 // ReactDOM.render(<TodoApp />, app);
 
 
