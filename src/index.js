@@ -16,6 +16,7 @@ import Expenses from "./routes/expenses";
 import Invoices from "./routes/invoices";
 import {TodoApp} from "./todo-app/todo-app"
 import Vehicles from './routes/vehicles';
+import DataFlow from './routes/dataflow';
 
 const rootElement = document.getElementById("root");
 
@@ -23,11 +24,13 @@ render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App />}>
+
+                <Route path="dataflow" element={<DataFlow />} />  
+
+                <Route path="vehicles" element={<Vehicles />} />
+                <Route path="todo" element={<TodoApp />} />
                 <Route path="expenses" element={<Expenses />} />
                 <Route path="invoices" element={<Invoices />} />
-                <Route path="vehicles" element={<Vehicles />} />
-
-                <Route path="todo" element={<TodoApp />} />
 
             </Route>
         </Routes>

@@ -1,5 +1,5 @@
 import React from "react"
-import {Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 export default function App() {
   return (
@@ -14,7 +14,11 @@ export default function App() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mr-auto">
-           
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/dataflow">DataFlow</Link>
+            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/vehicles">Vehicles</Link>
             </li>
