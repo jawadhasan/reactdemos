@@ -15,6 +15,7 @@ import App from "./app";
 import Expenses from "./routes/expenses";
 import Invoices from "./routes/invoices";
 import {TodoApp} from "./todo-app/todo-app"
+import Vehicles from './routes/vehicles';
 
 const rootElement = document.getElementById("root");
 
@@ -24,6 +25,8 @@ render(
             <Route path="/" element={<App />}>
                 <Route path="expenses" element={<Expenses />} />
                 <Route path="invoices" element={<Invoices />} />
+                <Route path="vehicles" element={<Vehicles />} />
+
                 <Route path="todo" element={<TodoApp />} />
 
             </Route>

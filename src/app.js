@@ -14,14 +14,19 @@ export default function App() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mr-auto">
+           
+            <li className="nav-item">
+              <Link className="nav-link" to="/vehicles">Vehicles</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/todo">Todo</Link>
+            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/invoices">Invoices</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/expenses">Expenses</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/todo">Todo</Link>
             </li>
           </ul>
         </div>
