@@ -4,64 +4,39 @@ import 'regenerator-runtime/runtime'
 import 'bootstrap'
 import "bootstrap/dist/css/bootstrap.css";
 
-import React from "react"
-import ReactDOM from "react-dom"
-
 import './resources/bootstrap.slate.css';
 import Swal from 'sweetalert2'
 
-import { TodoApp } from "./todo-app/todo-app.js";
+import React from "react"
+import { render } from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { fleet } from "./vehicles/fleet-data.js";
-import {VehicleDataService} from './vehicles/vehicle-data-service.js';
+import App from "./app";
+import Expenses from "./routes/expenses";
+import Invoices from "./routes/invoices";
+import {TodoApp} from "./todo-app/todo-app"
 
-import {VehicleTable} from "./vehicles/vehicles-table";
+const rootElement = document.getElementById("root");
 
+render(
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<App />}>
+                <Route path="expenses" element={<Expenses />} />
+                <Route path="invoices" element={<Invoices />} />
+                <Route path="todo" element={<TodoApp />} />
 
-import {Button} from "./hook-example/hook-example.js"
+            </Route>
+        </Routes>
+    </BrowserRouter>,
+    rootElement
 
-
-const app = document.getElementById("root");
-ReactDOM.render(<Button />, app);
-
-
-// ReactDOM.render(<VehicleTable vehicles={vehicles} />, app);
-
-// let dataservice = new VehicleDataService();
-// dataservice.loadData(fleet);
-
-// //cars data
-// let carsMap = dataservice.cars.map(elem => (
-//     {
-//       id: elem.id,
-//       license: elem.license,
-//       latlong: elem.latlong
-//     }));
-
-// //trucks data
-// let trucksMap = dataservice.trucks.map(elem => (
-//     {
-//       id: elem.id,
-//       license: elem.license,
-//       latlong: elem.latlong
-//     }));
-
-// let vehicles = carsMap.concat(trucksMap);
-
-// console.log('vehicles:', vehicles);
-
-//Vehicle  example
-// ReactDOM.render(<VehicleTable vehicles={vehicles} />, app);
-
-
-
-//Todo app example
-// ReactDOM.render(<TodoApp />, app);
+);
 
 
 setTimeout(() => {
     //call this method to display alerts....
-    let msgObj = {"message": "Hello World!"};
+    let msgObj = { "message": "Hello World!" };
     displayObject(msgObj);
 
 }, 2000);
