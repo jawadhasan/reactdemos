@@ -1,22 +1,63 @@
-# hexquote.com
 
-## online demo
+
+
+# reactjs demos
+
+Simple overview of reactjs use/purpose.
+
+## Description
+
+A simple guide  reactjs and overview of use.
+
 https://reactpage.awsclouddemos.com/
 
-## React Demos
-https://hexquote.com/react-js-basics-for-starters-and-angular-developers/
-https://hexquote.com/react-js-basics-part-2-for-starters-and-angular-developers/
-https://hexquote.com/react-js-basics-part-3-for-starters-and-angular-developers/
-https://hexquote.com/react-js-basics-part-4-for-starters-and-angular-developers/
+### Packages
 
-### Install react
-npm install react react-dom
+* npm install react react-dom
+* npm install axios
 
-### install axios
-npm install axios
+### Installing
 
+* npm ci
+* npm run dev
+* npm run build
 
-### Run application
->>npm ci
->>npm run dev
->>npm run build
+### Executing program
+
+```
+code blocks for commands
+```
+
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+
+Contributors names and contact info
+
+ex. Dominique Pizzie  
+ex. [@JawadHasan](https://hexquote.com/aboutme/)
+
+## Version History
+
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [reactjs-part1](https://hexquote.com/react-js-basics-for-starters-and-angular-developers/)
+* [reactjs-part2](https://hexquote.com/react-js-basics-part-2-for-starters-and-angular-developers/)
+* [reactjs-part3](https://hexquote.com/react-js-basics-part-3-for-starters-and-angular-developers/)
+* [reactjs-part4](https://hexquote.com/react-js-basics-part-4-for-starters-and-angular-developers/)
