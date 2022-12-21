@@ -16,10 +16,11 @@ import { HashRouter } from 'react-router-dom'
 import App from "./app";
 import Expenses from "./routes/expenses";
 import Invoices from "./routes/invoices";
-import {TodoApp} from "./todo-app/todo-app"
+import { TodoApp } from "./todo-app/todo-app"
 import Vehicles from './routes/vehicles';
 import DataFlow from './routes/dataflow';
 import GenericTable from './routes/generictable';
+import { AjaxTest } from './ajax-test/ajax-test';
 
 const rootElement = document.getElementById("root");
 
@@ -28,13 +29,14 @@ render(
         <Routes>
             <Route path="/" element={<App />}>
 
-                <Route path="dataflow" element={<DataFlow />} /> 
-                <Route path="generictable" element={<GenericTable />} /> 
+                <Route path="dataflow" element={<DataFlow />} />
+                <Route path="generictable" element={<GenericTable />} />
 
                 <Route path="vehicles" element={<Vehicles />} />
                 <Route path="todo" element={<TodoApp />} />
                 <Route path="expenses" element={<Expenses />} />
                 <Route path="invoices" element={<Invoices />} />
+                <Route path="ajaxtest" element={<AjaxTest />} />
 
             </Route>
         </Routes>
@@ -47,7 +49,7 @@ render(
 setTimeout(() => {
     //call this method to display alerts....
     let msgObj = { "message": "Hello World!" };
-    displayObject(msgObj);
+    // displayObject(msgObj);
 
 }, 2000);
 

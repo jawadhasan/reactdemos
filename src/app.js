@@ -36,6 +36,9 @@ export default function App() {
             <li className="nav-item">
               <Link className="nav-link" to="/expenses">Expenses</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/ajaxtest">AjaxTest</Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -46,10 +49,9 @@ export default function App() {
             <div className="col-lg-12">
               <h1 className="display-6">Basic React Demos</h1>
               <p className="fst-italic text-muted">This page is being used for testing React Demos. Powered by <a
-                className="text-primary" href="https://hexquote.com/" target="_blank">hexquote</a></p>
+                className="text-primary" href="https://hexquote.com/" target="_blank">awsclouddemos.com</a></p>
 
-              <p>See more demos <a
-                className="text-primary" href="https://jsui.awsclouddemos.com/" target="_blank">jsui.awsclouddemos.com</a></p>
+             
 
               <hr />
             </div>
