@@ -39,6 +39,12 @@ export default function App() {
             <li className="nav-item">
               <Link className="nav-link" to="/ajaxtest">AjaxTest</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/evencounter">Even Counter</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/sum">Sum</Link>
+            </li>
           </ul>
         </div>
       </nav>

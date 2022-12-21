@@ -21,6 +21,8 @@ import Vehicles from './routes/vehicles';
 import DataFlow from './routes/dataflow';
 import GenericTable from './routes/generictable';
 import { AjaxTest } from './ajax-test/ajax-test';
+import { EventCounter } from './even-counter/event-counter';
+import { Sum } from './sum/sum';
 
 const rootElement = document.getElementById("root");
 
@@ -37,6 +39,8 @@ render(
                 <Route path="expenses" element={<Expenses />} />
                 <Route path="invoices" element={<Invoices />} />
                 <Route path="ajaxtest" element={<AjaxTest />} />
+                <Route path="evencounter" element={<EventCounter onEvenClick={(data)=>console.log(data)} />} />
+                <Route path="sum" element={<Sum a={4} b={5} />} />
 
             </Route>
         </Routes>
