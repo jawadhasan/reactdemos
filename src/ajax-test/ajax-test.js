@@ -22,7 +22,7 @@ const TableRow = (props) => {
     const row = props.row;
     return (
         <tr key={row.id}>
-            <td>{row.id}</td>
+            {/* <td>{row.id}</td> */}
             <td>{row.email}</td>
             <td>{row.firstName}</td>
             <td>{row.lastName}</td>
@@ -81,6 +81,12 @@ export class AjaxTest extends React.Component {
 
     }
 
+    componentDidMount(){
+
+        //load users at starteup
+        this.getUsers();
+    }
+
     AddUser() {
 
 
@@ -100,7 +106,7 @@ export class AjaxTest extends React.Component {
 
         //use browser's fetch API
         fetch(this.endpoint, requestData)
-            .then(res => res.JSON())
+            .then(res => res.json())
             .then(data => {
                 this.setState({
                     data
@@ -151,8 +157,8 @@ export class AjaxTest extends React.Component {
     deleteUser(e) {
 
         let id = e.target.dataset.letter;
-        let deleteURL = `${this.endpoint}\\${id}`;
-        console.log(`DeleteUser`, deleteURL)
+        let deleteURL = `${this.endpoint}/${id}`;
+        
 
         const requestData = {
             method: 'delete',
@@ -163,7 +169,7 @@ export class AjaxTest extends React.Component {
         
           //ajax Call
           fetch(deleteURL, requestData)
-          .then(res => res)
+          .then(res => res.text())
           .then(data => {
               console.log(data);
              this.getUsers(); //reload users
@@ -179,7 +185,7 @@ export class AjaxTest extends React.Component {
                 <button className="btn btn-primary" onClick={this.getUsers}>Get Users</button>
                 <button disabled onClick={this.AddUser}>Post</button>
 
-                <Table tableHeaders="id email firstName lastName registeredAt Actions" tableData={this.state.users} removeTableItem={this.deleteUser}></Table>
+                <Table tableHeaders="Email First-Name Last-Name Registered-At Actions" tableData={this.state.users} removeTableItem={this.deleteUser}></Table>
                 {/* <TodoList items={this.state.items} />
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="new-todo">
