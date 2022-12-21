@@ -1,4 +1,6 @@
+import axios from "axios";
 import React from "react";
+
 
 
 const TableHeader = (props) => {
@@ -76,12 +78,14 @@ export class AjaxTest extends React.Component {
 
         //What on earth is the point of ES6 classes if their methods don't have proper lexical this binding,
         //and then don't even expose a syntax for binding their context directly on their definition!?
+
+        this.getUsersFetch = this.getUsersFetch.bind(this);
         this.getUsers = this.getUsers.bind(this);
         this.deleteUser = this.deleteUser.bind(this);
 
     }
 
-    componentDidMount(){
+    componentDidMount() {
 
         //load users at starteup
         this.getUsers();
@@ -132,14 +136,14 @@ export class AjaxTest extends React.Component {
         });
     }
 
-    getUsers() {
+    getUsersFetch() {
 
         const requestData = {
             method: 'get',
             headers: {
                 'content-type': 'application/json'
             }
-        }      
+        }
 
         //ajax Call
         fetch(this.endpoint, requestData)
@@ -152,13 +156,34 @@ export class AjaxTest extends React.Component {
             });
     }
 
+    getUsers() {
+        var self= this;
+        axios.get(this.endpoint)//'/user?ID=12345'
+            .then(function (response) {
+                // handle success
+                console.log(response);
+                self.setState({
+                    users: response.data
+                })
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .finally(function () {
+                // always executed
+            });
+    }
 
-
+    onClearArray = () => {
+        this.setState({ users: [] });
+      };
+    
     deleteUser(e) {
 
         let id = e.target.dataset.letter;
         let deleteURL = `${this.endpoint}/${id}`;
-        
+
 
         const requestData = {
             method: 'delete',
@@ -166,24 +191,26 @@ export class AjaxTest extends React.Component {
                 'content-type': 'application/json'
             }
         }
-        
-          //ajax Call
-          fetch(deleteURL, requestData)
-          .then(res => res.text())
-          .then(data => {
-              console.log(data);
-             this.getUsers(); //reload users
-          });
 
-        
+        //ajax Call
+        fetch(deleteURL, requestData)
+            .then(res => res.text())
+            .then(data => {
+                console.log(data);
+                this.getUsers(); //reload users
+            });
+
+
     }
 
     render() {
         return (
             <div>
-                <h4>Ajax - FetchAPI</h4>
-                <button className="btn btn-primary" onClick={this.getUsers}>Get Users</button>
-                <button disabled onClick={this.AddUser}>Post</button>
+                <h4>Ajax - Demos</h4>
+                <button className="btn btn-danger" onClick={this.onClearArray}>Clear Table</button>
+                <button className="btn btn-primary" onClick={this.getUsersFetch}>Get Users (fetch)</button>
+                <button className="btn btn-info" onClick={this.getUsers}>Get Users (axios)</button>
+                <button className="btn btn-default" disabled onClick={this.getUsers}>Post</button>
 
                 <Table tableHeaders="Email First-Name Last-Name Registered-At Actions" tableData={this.state.users} removeTableItem={this.deleteUser}></Table>
                 {/* <TodoList items={this.state.items} />
