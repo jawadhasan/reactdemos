@@ -18,9 +18,22 @@ https://reactpage.awsclouddemos.com/
 
 ### Installing
 
-* npm ci
-* npm run dev
-* npm run build
+Install dependencies
+```
+npm ci
+```
+
+Run development server
+```
+npm run dev
+```
+
+Build Project
+
+```
+npm run build
+```
+
 
 ### Executing program
 
@@ -39,8 +52,8 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@JawadHasan](https://hexquote.com/aboutme/)
+ex. [@jawadhasan](https://twitter.com/jawadhasan)  
+ex. [Blog](https://hexquote.com/aboutme/)
 
 ## Version History
 
