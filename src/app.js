@@ -49,6 +49,9 @@ export default function App() {
             <li className="nav-item">
               <Link className="nav-link" to="/reftest">Ref example</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
            
           </ul>
         </div>
@@ -71,7 +74,7 @@ export default function App() {
 
           </div>
 
-        <About />
+        
         </div>
       </section>
 

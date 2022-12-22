@@ -44,7 +44,7 @@ render(
                 <Route path="evencounter" element={<EventCounter onEvenClick={(data)=>console.log(data)} />} />
                 <Route path="sum" element={<Sum a={4} b={5} />} />
                 <Route path="reftest" element={<Identity />} />
-               
+                <Route path="about" element={<About />} />
 
             </Route>
         </Routes>
