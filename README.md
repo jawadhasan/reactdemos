@@ -34,6 +34,15 @@ Build Project
 npm run build
 ```
 
+Deploy to S3 (dist folder)
+
+```
+aws s3 sync . s3://reactpage.awsclouddemos.com --acl public-read
+```
+
+
+
+
 ## Help
 
 Any advise for common problems or issues.
