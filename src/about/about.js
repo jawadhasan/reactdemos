@@ -24,11 +24,27 @@ export function About(props) {
             <ul>
                 <li>Refs are ways of accessing underlying DOM elements that are wrapped by React components,
                     so that, you can imperatively modify them. Thare are kind of a tool of last resort. </li>
-                
-                <li>Use <span className="bg-primary">React.CreateRef() method.</span></li>
+
+                <li>Use <span className="bg-info">React.CreateRef() method.</span></li>
                 <li>It is common to create Ref in constructor of class component.</li>
             </ul>
-        </div>
 
+
+            <h4>Component Life Cycle</h4>
+            <ul>
+                <li>component life-cycle: React [class components] allows you to override lifecycle mothods </li>
+
+                <li>mounting: constructor&gt;ComponentWillMount&gt;render&gt;ComponentDidMount</li>
+                <li>updating: CompponentWillReceiveProps&gt;ShouldComponentUpdate&gt;ComponentWillUpdate&gt;render&gt;ComponentDidUpdate</li>
+            </ul>
+
+            <h4>Articles</h4>
+            <ul>
+                <li><a href="https://hexquote.com/react-js-basics-for-starters-and-angular-developers/" target="_blank">ReactJS- Part1</a></li>
+                <li><a href="https://hexquote.com/react-js-basics-part-2-for-starters-and-angular-developers/" target="_blank">ReactJS- Part2</a></li>
+                <li><a href="https://hexquote.com/react-js-basics-part-3-for-starters-and-angular-developers/" target="_blank">ReactJS- Part3</a></li>
+                <li><a href="https://hexquote.com/react-js-basics-part-4-for-starters-and-angular-developers/" target="_blank">ReactJS- Part4</a></li>
+            </ul>
+        </div>
     )
 }

@@ -2,9 +2,9 @@
 import 'regenerator-runtime/runtime'
 
 import 'bootstrap'
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 
-import './resources/bootstrap.slate.css';
+import './resources/bootstrap.cyborg.css';
 import Swal from 'sweetalert2'
 
 import React from "react"
@@ -44,7 +44,7 @@ render(
                 <Route path="evencounter" element={<EventCounter onEvenClick={(data)=>console.log(data)} />} />
                 <Route path="sum" element={<Sum a={4} b={5} />} />
                 <Route path="reftest" element={<Identity />} />
-                <Route path="about" element={<About />} />
+               
 
             </Route>
         </Routes>

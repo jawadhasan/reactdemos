@@ -1,5 +1,6 @@
 import React from "react"
 import { Outlet, Link } from "react-router-dom";
+import { About } from "./about/about";
 
 export default function App() {
   return (
@@ -27,7 +28,7 @@ export default function App() {
               <Link className="nav-link" to="/vehicles">Vehicles</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/todo">Todo</Link>
+              <Link className="nav-link" to="/todo">Todo (Form)</Link>
             </li>
 
             <li className="nav-item">
@@ -48,9 +49,7 @@ export default function App() {
             <li className="nav-item">
               <Link className="nav-link" to="/reftest">Ref example</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
-            </li>
+           
           </ul>
         </div>
       </nav>
@@ -60,8 +59,10 @@ export default function App() {
           <div className="row">
             <div className="col-lg-12">
               <h1 className="display-6">Basic React Demos</h1>
-              <p className="fst-italic text-muted">This page is being used for testing React Demos. Powered by <a
-                className="text-primary" href="https://hexquote.com/" target="_blank">awsclouddemos.com</a></p>
+              <p >This page is being used for testing React Demos. Powered by <a
+                className="text-primary" href="https://awsclouddemos.com/" target="_blank">awsclouddemos.com</a> | &nbsp;
+                <a className="text-primary" href="https://hexquote.com/" target="_blank">hexquote.com</a>
+                </p>
 
              
 
@@ -70,7 +71,7 @@ export default function App() {
 
           </div>
 
-
+        <About />
         </div>
       </section>
 

@@ -34,15 +34,7 @@ function Hello(props){
 }
 
 
-
-
-
-
-
-//component life-cycle: React [class components] allows you to override lifecycle mothods
-//mounting: constructor>ComponentWillMount>render>ComponentDidMount
-//updating: CompponentWillReceiveProps>ShouldComponentUpdate>ComponentWillUpdate>render>ComponentDidUpdate
-
+//class style
 export class Sum1 extends React.Component {
 
     render() {
