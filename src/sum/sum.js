@@ -1,15 +1,6 @@
 import React from "react";
 import {ConditionalDisplay} from "../cond-display/cond-display"
 
-//React is component based.Each component is a separate concern. Think of component as simple functions in programming.
-//function components / class components
-//props: are explicity, similar to HTML attributes
-//state: is internal, state can be changed, props can't.
-
-//All react components must act like pure functions with respect to received props.
-//elements that represent DOM tags are written in lower-case.
-//user-defined elements/components must be an identifier starting with a capital letter.
-
 
 
 
@@ -17,7 +8,8 @@ import {ConditionalDisplay} from "../cond-display/cond-display"
 export function Sum(props) {
     return (
         <div>
-            <h1>{props.a} + {props.b} = {props.a + props.b}</h1>
+            <Hello now={new Date().toString("dd.mm.yyyy hh:ss")}></Hello>
+            <h4>{props.a} + {props.b} = {props.a + props.b}</h4>
             <Events />
         </div>
 
@@ -36,10 +28,16 @@ function Events(props) {
 }
 
 
+//sub element
+function Hello(props){
+    return <h4>Hello at {props.now}</h4>
+}
 
 
 
-//Class syntax: this syntax has some additional features, we may need occasionally.
+
+
+
 
 //component life-cycle: React [class components] allows you to override lifecycle mothods
 //mounting: constructor>ComponentWillMount>render>ComponentDidMount

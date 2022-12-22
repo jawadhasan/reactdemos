@@ -206,27 +206,14 @@ export class AjaxTest extends React.Component {
     render() {
         return (
             <div>
-                <h4>Ajax - Demos</h4>
-                <button className="btn btn-danger" onClick={this.onClearArray}>Clear Table</button>
+                <h4>Ajax - Data</h4>
+                <button className="btn btn-warning" onClick={this.onClearArray}>Clear Table</button>
                 <button className="btn btn-primary" onClick={this.getUsersFetch}>Get Users (fetch)</button>
                 <button className="btn btn-info" onClick={this.getUsers}>Get Users (axios)</button>
-                <button className="btn btn-default" disabled onClick={this.getUsers}>Post</button>
+                <button className="btn btn-default float-end" disabled onClick={this.getUsers}>+Add</button>
 
                 <Table tableHeaders="Email First-Name Last-Name Registered-At Actions" tableData={this.state.users} removeTableItem={this.deleteUser}></Table>
-                {/* <TodoList items={this.state.items} />
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="new-todo">
-                        What needs to be done?
-                    </label>
-                    <input
-                        id="new-todo"
-                        onChange={this.handleChange}
-                        value={this.state.text}
-                    />
-                    <button>
-                        Add #{this.state.items.length + 1}
-                    </button>
-                </form> */}
+               
             </div>
         );
     }

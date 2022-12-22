@@ -35,15 +35,21 @@ export default function App() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/expenses">Expenses</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/ajaxtest">AjaxTest</Link>
-            </li>
+            </li>           
             <li className="nav-item">
               <Link className="nav-link" to="/evencounter">Even Counter</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/sum">Sum</Link>
+              <Link className="nav-link" to="/sum">Function components</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/ajaxtest">Data (Ajax)</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/reftest">Ref example</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
             </li>
           </ul>
         </div>

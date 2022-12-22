@@ -23,6 +23,8 @@ import GenericTable from './routes/generictable';
 import { AjaxTest } from './ajax-test/ajax-test';
 import { EventCounter } from './even-counter/event-counter';
 import { Sum } from './sum/sum';
+import { About } from './about/about';
+import { Identity } from './ref-example/identity';
 
 const rootElement = document.getElementById("root");
 
@@ -41,6 +43,8 @@ render(
                 <Route path="ajaxtest" element={<AjaxTest />} />
                 <Route path="evencounter" element={<EventCounter onEvenClick={(data)=>console.log(data)} />} />
                 <Route path="sum" element={<Sum a={4} b={5} />} />
+                <Route path="reftest" element={<Identity />} />
+                <Route path="about" element={<About />} />
 
             </Route>
         </Routes>

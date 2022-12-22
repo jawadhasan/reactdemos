@@ -34,13 +34,6 @@ Build Project
 npm run build
 ```
 
-
-### Executing program
-
-```
-code blocks for commands
-```
-
 ## Help
 
 Any advise for common problems or issues.
