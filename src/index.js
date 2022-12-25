@@ -14,18 +14,19 @@ import { HashRouter } from 'react-router-dom'
 
 
 import App from "./app";
-import Expenses from "./routes/expenses";
+
 import Invoices from "./routes/invoices";
 import { TodoApp } from "./todo-app/todo-app"
 import Vehicles from './routes/vehicles';
 import DataFlow from './routes/dataflow';
-import GenericTable from './routes/generictable';
 import { AjaxTest } from './ajax-test/ajax-test';
-import { EventCounter } from './even-counter/event-counter';
+
 import { Sum } from './sum/sum';
 import { About } from './about/about';
-import { Identity } from './ref-example/identity';
+
 import DynamicTable from './dynamic-table/dynamic-table';
+import MiscDemo from './misc/misc';
+import FinalSpace from './misc/final-space';
 
 const rootElement = document.getElementById("root");
 
@@ -35,16 +36,16 @@ render(
             <Route path="/" element={<App />}>
 
                 <Route path="dataflow" element={<DataFlow />} />
-                <Route path="generictable" element={<GenericTable />} />
+      
 
                 <Route path="vehicles" element={<Vehicles />} />
                 <Route path="todo" element={<TodoApp />} />              
                 <Route path="invoices" element={<Invoices />} />
-                <Route path="ajaxtest" element={<AjaxTest />} />
-                <Route path="evencounter" element={<EventCounter onEvenClick={(data)=>console.log(data)} />} />
-                <Route path="sum" element={<Sum a={4} b={5} />} />
-                <Route path="reftest" element={<Identity />} />
+                <Route path="ajaxtest" element={<AjaxTest />} />               
+                <Route path="sum" element={<Sum a={4} b={5} />} />               
                 <Route path="dynamictable" element={<DynamicTable />} />
+                <Route path="finalspace" element={<FinalSpace />} />
+                <Route path="misc" element={<MiscDemo />} />
                 <Route path="about" element={<About />} />
 
             </Route>

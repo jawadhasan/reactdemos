@@ -18,11 +18,7 @@ export default function App() {
 
             <li className="nav-item">
               <Link className="nav-link" to="/dataflow">DataFlow</Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/generictable">Generic Table</Link>
-            </li>
+            </li>         
 
             <li className="nav-item">
               <Link className="nav-link" to="/vehicles">Vehicles</Link>
@@ -33,24 +29,23 @@ export default function App() {
 
             <li className="nav-item">
               <Link className="nav-link" to="/invoices">Invoices</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/expenses">Expenses</Link>
-            </li>           
-            <li className="nav-item">
-              <Link className="nav-link" to="/evencounter">Even Counter</Link>
-            </li>
+            </li>                   
+           
             <li className="nav-item">
               <Link className="nav-link" to="/sum">Function components</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/ajaxtest">Ajax</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/reftest">Ref</Link>
-            </li>
+           
             <li className="nav-item">
               <Link className="nav-link" to="/dynamictable">Editable Table</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/finalspace">FinalSpace</Link>
+            </li>    
+            <li className="nav-item">
+              <Link className="nav-link" to="/misc">Misc</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
