@@ -25,6 +25,7 @@ import { EventCounter } from './even-counter/event-counter';
 import { Sum } from './sum/sum';
 import { About } from './about/about';
 import { Identity } from './ref-example/identity';
+import DynamicTable from './dynamic-table/dynamic-table';
 
 const rootElement = document.getElementById("root");
 
@@ -37,13 +38,13 @@ render(
                 <Route path="generictable" element={<GenericTable />} />
 
                 <Route path="vehicles" element={<Vehicles />} />
-                <Route path="todo" element={<TodoApp />} />
-                <Route path="expenses" element={<Expenses />} />
+                <Route path="todo" element={<TodoApp />} />              
                 <Route path="invoices" element={<Invoices />} />
                 <Route path="ajaxtest" element={<AjaxTest />} />
                 <Route path="evencounter" element={<EventCounter onEvenClick={(data)=>console.log(data)} />} />
                 <Route path="sum" element={<Sum a={4} b={5} />} />
                 <Route path="reftest" element={<Identity />} />
+                <Route path="dynamictable" element={<DynamicTable />} />
                 <Route path="about" element={<About />} />
 
             </Route>

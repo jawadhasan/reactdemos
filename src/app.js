@@ -21,7 +21,7 @@ export default function App() {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/generictable">Vehicles(Generic Table)</Link>
+              <Link className="nav-link" to="/generictable">Generic Table</Link>
             </li>
 
             <li className="nav-item">
@@ -44,10 +44,13 @@ export default function App() {
               <Link className="nav-link" to="/sum">Function components</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/ajaxtest">Data (Ajax)</Link>
+              <Link className="nav-link" to="/ajaxtest">Ajax</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/reftest">Ref example</Link>
+              <Link className="nav-link" to="/reftest">Ref</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/dynamictable">Editable Table</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
