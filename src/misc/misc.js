@@ -11,8 +11,6 @@ import Vehicles from "./vehicles";
 import { Button } from "./hook-example";
 import { Identity } from "./identity";
 import ToogleImage from "./toggle-image";
-import Users from "./users";
-import UserCrud from "./users-crud";
 import UsersCustomHook from "./users-custom-hook";
 
 export default function MiscDemo() {
@@ -50,8 +48,7 @@ export default function MiscDemo() {
                             <GitHubUser />
                         </td>
                         <td>
-                            <h5>3. Users -API</h5>
-                            <Users />
+                            <h5>3. place holder</h5>                            
                         </td>
                     </tr>
                     <tr>

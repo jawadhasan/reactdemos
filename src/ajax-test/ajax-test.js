@@ -55,11 +55,7 @@ export const Table = (props) => {
         </table>
     );
 }
-// Wrong
-//this.state.comment = 'Hello';
 
-// Correct
-//this.setState({comment: 'Hello'});
 
 export class AjaxTest extends React.Component {
 
