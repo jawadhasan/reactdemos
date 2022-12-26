@@ -12,18 +12,20 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mr-auto">
+
              <li className="nav-item">
                 <NavLink className="nav-link" to="/">Home</NavLink>
              </li>   
+             <li className="nav-item">
+                <NavLink className="nav-link" to="/finalspace">FinalSpace</NavLink>
+             </li>
              <li className="nav-item">
                 <NavLink className="nav-link" to="/users">Users</NavLink>
              </li>         
              <li className="nav-item">
                 <NavLink className="nav-link" to="/products">Products</NavLink>
              </li>
-             <li className="nav-item">
-                <NavLink className="nav-link" to="/finalspace">FinalSpace</NavLink>
-             </li>
+           
              <li className="nav-item">
                 <NavLink className="nav-link" to="/dynamictable">Dynamic-Table</NavLink>
              </li>

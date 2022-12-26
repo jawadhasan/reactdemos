@@ -1,13 +1,14 @@
 import React from "react"
 import { Routes, Route } from 'react-router-dom';
-import { Outlet, Link } from "react-router-dom";
+import { lazy, Suspense } from 'react';
 import { About } from "./about/about";
 import Home from "./home"
 import Products from "./products"
 import ProductDetails from "./products/product-details";
 import NoMatch from "./components/no-match"
 import NavBar from "./components/nav-bar"
-import Users from "./users/users";
+const Users = lazy(() => import('./users/users')); // lasy loading test
+// import Users from "./users/users";  
 import AddUser from "./users/add-user";
 import EditUser from "./users/edit-user"
 import UserDetails from "./users/user-details";
@@ -19,6 +20,7 @@ const App = () => {
    return (
       <>
          <NavBar />
+         <Suspense fallback={<div className="container">Loading...</div>}>
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="users" element={<Users />} />
@@ -34,6 +36,7 @@ const App = () => {
             
             <Route path="*" element={<NoMatch />} />
          </Routes>
+         </Suspense>
       </>
    );
 };

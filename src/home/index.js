@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div>
-            <h6>Home Page</h6>
-            <Link to={`/products/1`}>
-                <div className="btn btn-primary">View Details (test)</div>
-            </Link>
+            <h5>Home Page</h5>  
+            <p className="text-primary">ReactJS Demos | Powered by <a  href="https://hexquote.com/" target="_blank">hexquote</a></p>          
         </div>
 
 
