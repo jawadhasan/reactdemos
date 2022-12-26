@@ -5,11 +5,12 @@ import {ConditionalDisplay} from "../cond-display/cond-display"
 
 
 //functional component
-export function Sum(props) {
+export default function Sum(props) {
     return (
         <div>
-            <Hello now={new Date().toString("dd.mm.yyyy hh:ss")}></Hello>
-            <h4>{props.a} + {props.b} = {props.a + props.b}</h4>
+            <h5>Function components</h5>
+            <Hello now={new Date().toDateString()}></Hello>
+            <p>{props.a} + {props.b} = {props.a + props.b}</p>
             <Events />
         </div>
 
@@ -30,12 +31,12 @@ function Events(props) {
 
 //sub element
 function Hello(props){
-    return <h4>Hello at {props.now}</h4>
+    return <small>Hello at {props.now}</small>
 }
 
 
 //class style
-export class Sum1 extends React.Component {
+ class Sum1 extends React.Component {
 
     render() {
         return(   

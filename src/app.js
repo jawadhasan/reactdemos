@@ -14,26 +14,16 @@ export default function App() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mr-auto">
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/dataflow">DataFlow</Link>
-            </li>         
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/vehicles">Vehicles</Link>
-            </li>
+          <ul className="navbar-nav mr-auto">         
+          
             <li className="nav-item">
               <Link className="nav-link" to="/todo">Todo (Form)</Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/invoices">Invoices</Link>
-            </li>                   
-           
-            <li className="nav-item">
-              <Link className="nav-link" to="/sum">Function components</Link>
-            </li>
+            </li>  
+          
             <li className="nav-item">
               <Link className="nav-link" to="/ajaxtest">Ajax</Link>
             </li>

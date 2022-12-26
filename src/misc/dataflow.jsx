@@ -10,10 +10,8 @@ export default function DataFlow() {
   const incrementCounter = () => setCounter(counter + 1);
 
     return (
-      <div>
-        
-        <h2>DataFlow</h2>
-
+      <div>        
+        <h5>DataFlow</h5>
         <Button onClickFunction={incrementCounter} />      
         <Display message={counter} />
       </div>

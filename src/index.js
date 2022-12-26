@@ -17,11 +17,8 @@ import App from "./app";
 
 import Invoices from "./routes/invoices";
 import { TodoApp } from "./todo-app/todo-app"
-import Vehicles from './routes/vehicles';
-import DataFlow from './routes/dataflow';
 import { AjaxTest } from './ajax-test/ajax-test';
 
-import { Sum } from './sum/sum';
 import { About } from './about/about';
 
 import DynamicTable from './dynamic-table/dynamic-table';
@@ -32,17 +29,12 @@ const rootElement = document.getElementById("root");
 
 render(
     <HashRouter >
+        <h5>Always there</h5>
         <Routes>
             <Route path="/" element={<App />}>
-
-                <Route path="dataflow" element={<DataFlow />} />
-      
-
-                <Route path="vehicles" element={<Vehicles />} />
-                <Route path="todo" element={<TodoApp />} />              
+                <Route path="todo" element={<TodoApp />} />
                 <Route path="invoices" element={<Invoices />} />
-                <Route path="ajaxtest" element={<AjaxTest />} />               
-                <Route path="sum" element={<Sum a={4} b={5} />} />               
+                <Route path="ajaxtest" element={<AjaxTest />} />             
                 <Route path="dynamictable" element={<DynamicTable />} />
                 <Route path="finalspace" element={<FinalSpace />} />
                 <Route path="misc" element={<MiscDemo />} />

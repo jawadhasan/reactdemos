@@ -7,8 +7,10 @@ export function About(props) {
             <ul>
                 <li>React is component based. Each component is a separate concern. Think of component as simple functions in programming.</li>
                 <li>A Rect component is a function that converts a model object into a pieces of user interfac. That's it.</li>
-                <li>Two type of componets are function components and class components.</li>
+                <li>Two type of componets are <b> function components</b> and <b>class components.</b></li>
+                <li>Function components: 'this' not needed | class components: complex, need to deal with 'this' and also need to 'bind' methods.</li>
                 <li>funciton components are recommended, however class syntax has some additional features, we may need occasionally</li>
+                <li>Function in combination with hooks enable straight forward components creating structured apps.</li>
             </ul>
             <ul>
                 <li>props: are explicity, similar to HTML attributes</li>
@@ -16,9 +18,18 @@ export function About(props) {
                 <li>All react components must act like pure functions with respect to received props.</li>
                 <li>elements that represent DOM tags are written in lower-case.</li>
                 <li>user-defined elements/components must be an identifier starting with a capital letter.</li>
+                <li>All props values and internal state is activey monitored by react.</li>
+                <li>React re-renders a component when a prop or state value changes.</li>
 
             </ul>
 
+
+<h4>Hooks: useEffect</h4>
+    <ul>
+        <li>A hook lets you hook into React's internal in a functional-component.</li>
+        <li>useEffect enables us to create <u>side-effects</u> when the state of a component changes.</li>
+        
+    </ul>
 
             <h4>Refs</h4>
             <ul>

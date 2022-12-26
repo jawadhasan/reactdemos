@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const gitHubUrl = "https://api.github.com/users/jawadhasan"
 
-export default function ExternalData() {
+export default function GitHubUser() {
 
     //State Hook below will allow the use of state in the  function component without writing a separate class component. 
     //Effect Hook, which will allow you to perform side effect operations such as fetching data, clean up, or DOM manipulation.
@@ -23,6 +23,7 @@ export default function ExternalData() {
     const getGitHubUserWithFetch = async () => {
         const response = await fetch(gitHubUrl);
         const jsonData = await response.json();
+        console.log(jsonData);
         setUserData(jsonData);
       };
 
@@ -34,7 +35,7 @@ export default function ExternalData() {
 
     return (
         <div className="user-container">
-            <p className="info-item"><span className="fa fa-user"> </span>{userData.name}</p>
+            <p className="info-item"><span className="fa fa-user"> </span>{userData.login}</p>
             <p className="info-item"><span className="fa fa-building"></span> {userData.location}</p>
             <p className="info-item"><span className="fa fa-blog"></span> {userData.blog}</p>
             <p className="info-item"><span className="fa fa-building"></span> Company: {userData.company}</p>
