@@ -2,7 +2,7 @@ import React from "react"
 
 import { fleet } from "../vehicles/fleet-data.js";
 import { VehicleDataService } from '../vehicles/vehicle-data-service.js';
-import { Table } from "../table/table";
+import Table from "./table"
 
 
 
@@ -33,8 +33,10 @@ let vehicles = carsMap.concat(trucksMap);
 
     return (
       <div>
-        <h2>Vehicles</h2>
+        <h6>Vehicles</h6>
         <Table tableData={vehicles} tableHeaders="id license latlong" />
+
+       
       </div>
     );
   }

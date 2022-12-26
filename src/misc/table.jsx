@@ -48,7 +48,7 @@ const TableBody = (props) => {
 
 }
 
-export const Table = (props) => {
+export default function Table(props){
 
   return (
     <table className="table">
