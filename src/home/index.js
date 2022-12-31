@@ -4,10 +4,15 @@ const Home = () => {
     return (
         <div>
             <h5>Home Page</h5>  
-            <p className="text-primary">ReactJS Demos | Powered by <a  href="https://hexquote.com/" target="_blank">hexquote</a></p>          
+           
+
+            <div className="col col-md-12 mb-3">
+                <i>Powered By: </i>
+                <a className="text-primary" href="https://awsclouddemos.com/" target="_blank">awsclouddemos.com</a> |
+                <a className="text-primary" href="https://hexquote.com/" target="_blank"> hexquote.com</a>
+            </div>
+
         </div>
-
-
     );
 }
 
