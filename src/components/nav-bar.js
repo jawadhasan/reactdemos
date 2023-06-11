@@ -39,6 +39,9 @@ const NavBar = () => {
                 <NavLink className="nav-link" to="/starmatch">Star Match</NavLink>
              </li>
              <li className="nav-item">
+                <NavLink className="nav-link" to="/halma">Halma</NavLink>
+             </li>
+             <li className="nav-item">
                 <a className="nav-link" href="https://signalrchat.awsclouddemos.com/" target="_blank">SignalR Chat</a>
              </li>
           </ul>

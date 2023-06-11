@@ -17,6 +17,7 @@ import FinalSpace from "./misc/final-space"
 import DynamicTable from "./dynamic-table/dynamic-table"
 
 import StarMatch from "./star-match"
+import Halma from "./halma";
 
 const App = () => {
    return (
@@ -36,6 +37,9 @@ const App = () => {
             <Route path="/misc" element={ <MiscDemo />} />
             <Route path="/about" element={<About />} />
             <Route path="/starmatch" element={<StarMatch />} />
+
+            <Route path="/halma" element={<Halma />} />
+
             
             <Route path="*" element={<NoMatch />} />
          </Routes>

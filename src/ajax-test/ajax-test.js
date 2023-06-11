@@ -70,7 +70,7 @@ export class AjaxTest extends React.Component {
             users: []
         };
 
-        this.endpoint = "https://rqjmvfm8l5.execute-api.eu-central-1.amazonaws.com/Prod/api/users";
+        this.endpoint = "https://kjsa0fp0tb.execute-api.eu-central-1.amazonaws.com/Prod/api/users";
 
         //What on earth is the point of ES6 classes if their methods don't have proper lexical this binding,
         //and then don't even expose a syntax for binding their context directly on their definition!?

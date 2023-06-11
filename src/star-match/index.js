@@ -18,6 +18,9 @@ const PlayNumer = ({ number }) => {
 
 const StarMatch = () => {
     const [stars, setStars] = useState(utils.random(1, 9));
+    const [availableNums, setAvailableNums] = useState(utils.range(1, 9));
+    const [candidateNums, setCanditateNums] = useState([]);
+    
     return (
         <div className="game">
             <div className="help"> Pick one or more numbers that sum to the number of stars</div>

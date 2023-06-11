@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
 
-const apiURL = "https://rqjmvfm8l5.execute-api.eu-central-1.amazonaws.com/Prod/api/users"
+const apiURL = "https://kjsa0fp0tb.execute-api.eu-central-1.amazonaws.com/Prod/api/users"
 
 const UserDetails = () => {
 

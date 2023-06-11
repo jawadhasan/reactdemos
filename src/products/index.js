@@ -7,7 +7,7 @@ import SearchResults from "./search-results";
 import "./products-app.css";
 //sfc tab: stateless function
 
-const apiURL = "https://rqjmvfm8l5.execute-api.eu-central-1.amazonaws.com/Prod/api/products"
+const apiURL = "https://kjsa0fp0tb.execute-api.eu-central-1.amazonaws.com/Prod/api/products"
 
 const Products = () => {
 

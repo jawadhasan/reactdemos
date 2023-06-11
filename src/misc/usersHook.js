@@ -5,7 +5,7 @@ import axios from "axios";
 //Creating a custom hook is relatively simple. You need a function with the word use in front of the name:
 //Hooks only work in functional components. They will not work inside of a class componen.
 
-const apiURL = "https://rqjmvfm8l5.execute-api.eu-central-1.amazonaws.com/Prod/api/users"
+const apiURL = "https://kjsa0fp0tb.execute-api.eu-central-1.amazonaws.com/Prod/api/users"
 
 const useUsers = () => {
 
